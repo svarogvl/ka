@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
-  Vcl.ExtCtrls, Vcl.ComCtrls, Data.DB, Data.Win.ADODB;
+  Vcl.ExtCtrls, Vcl.ComCtrls, Data.DB, Data.Win.ADODB, Vcl.Grids, Vcl.DBGrids;
 
 type
   TForm1 = class(TForm)
@@ -65,7 +65,7 @@ type
     Label23: TLabel;
     Label24: TLabel;
     Label25: TLabel;
-    TabSheet4: TTabSheet;
+    sessionResultTab: TTabSheet;
     TabSheet5: TTabSheet;
     TabSheet6: TTabSheet;
     DBEdit18: TDBEdit;
@@ -76,6 +76,23 @@ type
     DBEdit23: TDBEdit;
     DBEdit24: TDBEdit;
     DBEdit25: TDBEdit;
+    search: TRadioButton;
+    showall: TRadioButton;
+    searchButton: TButton;
+    resultSessionSearchGrid: TDBGrid;
+    DBNavigator4: TDBNavigator;
+    lastname: TCheckBox;
+    subject: TCheckBox;
+    grade: TCheckBox;
+    lastNameEdit: TEdit;
+    subjectEdit: TEdit;
+    GradeEdit: TEdit;
+    resultSessionDataSet: TADODataSet;
+    resultSessionDataSource: TDataSource;
+    procedure lastnameClick(Sender: TObject);
+    procedure subjectClick(Sender: TObject);
+    procedure gradeClick(Sender: TObject);
+    procedure searchButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -88,5 +105,80 @@ var
 implementation
 
 {$R *.dfm}
+
+
+procedure TForm1.gradeClick(Sender: TObject);
+begin
+  if grade.Checked then
+  begin
+    GradeEdit.Visible := true;
+  end
+  else
+  begin
+    GradeEdit.Visible := false;
+  end;
+end;
+
+procedure TForm1.lastnameClick(Sender: TObject);
+begin
+  if lastname.Checked then
+  begin
+    lastNameEdit.Visible := true;
+  end
+  else
+  begin
+    lastNameEdit.Visible := false;
+  end;
+
+end;
+
+procedure TForm1.searchButtonClick(Sender: TObject);
+var
+    sqlBase:String;
+begin
+  resultSessionDataSet.Active := false;
+  sqlBase := 'select [Студенты].[Фамилия], ' +
+    ' [Студенты].[Имя], [Студенты].[Отчество], [Сессия].[Группа], ' +
+    ' [Сессия].[ДатаСдачи], [Дисциплины].[НазваниеДисциплиныКраткое], ' +
+    ' [Сессия].[Курс], [Направления].[Направление], [Сессия].[Оценка], '+
+    ' [Сессия].[Семестр], [Факультеты].[Факультет]' +
+    'from Сессия, Студенты, Дисциплины, Направления, Факультеты '+
+    ' where [Сессия].[Студент]=[Студенты].[Шифр] ' +
+    ' and [Сессия].[Дисциплина]=[Дисциплины].[КодДисциплины]' +
+    ' and [Сессия].[Направление]=[Направления].[КодНаправления]' +
+    ' and [Сессия].[Факультет]=[Факультеты].[КодФакультета]';
+  if showall.Checked then
+  begin
+    resultSessionDataSet.CommandText := sqlBase;
+  end
+  else
+  begin
+    if lastname.Checked and (lastNameEdit.Text <> '') then
+      sqlBase := sqlBase + ' and [Студенты].[Фамилия] = ''' + lastNameEdit.Text + '''';
+
+    if subject.Checked and (subjectEdit.Text <> '') then
+      sqlBase := sqlBase + ' and ([Дисциплины].[НазваниеДисциплиныПолное] = ''' +
+      subjectEdit.Text + ''' or [Дисциплины].[НазваниеДисциплиныКраткое] = ''' + subjectEdit.Text +''')';
+
+    if grade.Checked and (GradeEdit.Text <> '') then
+      sqlBase := sqlBase + ' and [Сессия].[Оценка] = ' + GradeEdit.Text;
+
+    resultSessionDataSet.CommandText := sqlBase;
+  end;
+  resultSessionDataSet.Active := true;
+end;
+
+
+procedure TForm1.subjectClick(Sender: TObject);
+begin
+  if subject.Checked then
+  begin
+    subjectEdit.Visible := true;
+  end
+  else
+  begin
+    subjectEdit.Visible := false;
+  end;
+end;
 
 end.

@@ -18,14 +18,10 @@ object Form1: TForm1
     Top = 8
     Width = 764
     Height = 499
-    ActivePage = TabSheet3
+    ActivePage = sessionResultTab
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = #1054#1073#1097#1080#1077' '#1089#1074#1077#1076#1077#1085#1080#1103' '#1086' '#1089#1090#1091#1076#1077#1085#1090#1072#1093
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label1: TLabel
         Left = 40
         Top = 16
@@ -198,10 +194,6 @@ object Form1: TForm1
     object TabSheet2: TTabSheet
       Caption = #1057#1086#1094#1080#1072#1083#1100#1085#1099#1081' '#1087#1072#1089#1087#1086#1088#1090' '#1075#1088#1091#1087#1087#1099
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label11: TLabel
         Left = 48
         Top = 24
@@ -315,7 +307,7 @@ object Form1: TForm1
         TabOrder = 6
       end
       object DBNavigator2: TDBNavigator
-        Left = 240
+        Left = 244
         Top = 352
         Width = 240
         Height = 25
@@ -446,32 +438,123 @@ object Form1: TForm1
         TabOrder = 8
       end
     end
-    object TabSheet4: TTabSheet
+    object sessionResultTab: TTabSheet
       Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1099' '#1089#1077#1089#1089#1080#1080
       ImageIndex = 3
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
+      object search: TRadioButton
+        Left = 80
+        Top = 16
+        Width = 113
+        Height = 17
+        Caption = #1055#1086#1080#1089#1082
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+      object showall: TRadioButton
+        Left = 520
+        Top = 16
+        Width = 113
+        Height = 17
+        Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1074#1089#1077
+        TabOrder = 1
+      end
+      object searchButton: TButton
+        Left = 520
+        Top = 112
+        Width = 75
+        Height = 25
+        Caption = #1053#1072#1081#1090#1080
+        TabOrder = 2
+        OnClick = searchButtonClick
+      end
+      object resultSessionSearchGrid: TDBGrid
+        Left = 0
+        Top = 175
+        Width = 756
+        Height = 258
+        DataSource = resultSessionDataSource
+        TabOrder = 3
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+      object lastname: TCheckBox
+        Left = 80
+        Top = 53
+        Width = 97
+        Height = 17
+        Caption = #1060#1072#1084#1080#1083#1080#1103
+        TabOrder = 4
+        OnClick = lastnameClick
+      end
+      object subject: TCheckBox
+        Left = 80
+        Top = 80
+        Width = 97
+        Height = 17
+        Caption = #1044#1080#1089#1094#1080#1087#1083#1080#1085#1099
+        TabOrder = 5
+        OnClick = subjectClick
+      end
+      object grade: TCheckBox
+        Left = 80
+        Top = 107
+        Width = 97
+        Height = 17
+        Caption = #1054#1094#1077#1085#1082#1072
+        TabOrder = 6
+        OnClick = gradeClick
+      end
+      object lastNameEdit: TEdit
+        Left = 224
+        Top = 53
+        Width = 121
+        Height = 21
+        TabOrder = 7
+        TextHint = #1042#1074#1077#1076#1080#1090#1077' '#1092#1072#1084#1080#1083#1080#1102
+        Visible = False
+      end
+      object subjectEdit: TEdit
+        Left = 224
+        Top = 80
+        Width = 121
+        Height = 21
+        TabOrder = 8
+        TextHint = #1042#1099#1073#1077#1088#1080#1090#1077' '#1076#1080#1089#1094#1080#1087#1083#1080#1085#1091
+        Visible = False
+      end
+      object GradeEdit: TEdit
+        Left = 224
+        Top = 107
+        Width = 121
+        Height = 21
+        TabOrder = 9
+        TextHint = #1042#1074#1077#1076#1080#1090#1077' '#1086#1094#1077#1085#1082#1091
+        Visible = False
+      end
     end
     object TabSheet5: TTabSheet
       Caption = #1054#1082#1072#1079#1072#1085#1080#1077' '#1089#1090#1091#1076#1077#1085#1090#1072#1084' '#1087#1086#1084#1086#1097#1080
       ImageIndex = 4
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
     end
     object TabSheet6: TTabSheet
       Caption = #1055#1088#1086#1074#1077#1076#1077#1085#1080#1077' '#1082#1091#1088#1072#1090#1086#1088#1089#1082#1080#1093' '#1095#1072#1089#1086#1074
       ImageIndex = 5
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
     end
   end
+  object DBNavigator4: TDBNavigator
+    Left = 256
+    Top = 471
+    Width = 240
+    Height = 25
+    DataSource = resultSessionDataSource
+    TabOrder = 1
+  end
   object ADOConnection1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyProjects\delph' +
       'i\diplom\ka\kurator.mdb;Persist Security Info=False'
@@ -482,6 +565,7 @@ object Form1: TForm1
     Top = 440
   end
   object ADODataSet1: TADODataSet
+    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     CommandText = 'select *  from '#1057#1090#1091#1076#1077#1085#1090#1099
@@ -519,5 +603,20 @@ object Form1: TForm1
   object DataSource3: TDataSource
     Left = 508
     Top = 440
+  end
+  object resultSessionDataSet: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 
+      'select '#1043#1088#1091#1087#1087#1072', '#1044#1072#1090#1072#1057#1076#1072#1095#1080', '#1044#1080#1089#1094#1080#1087#1083#1080#1085#1072', '#1050#1091#1088#1089', '#1053#1072#1087#1088#1072#1074#1083#1077#1085#1080#1077', '#1054#1094#1077#1085#1082#1072',' +
+      ' '#1055#1088#1086#1092#1080#1083#1100', '#1057#1077#1084#1077#1089#1090#1088', '#1057#1090#1091#1076#1077#1085#1090', '#1060#1072#1082#1091#1083#1100#1090#1077#1090', '#1060#1054#1057' from '#1057#1077#1089#1089#1080#1103
+    Parameters = <>
+    Left = 652
+    Top = 72
+  end
+  object resultSessionDataSource: TDataSource
+    DataSet = resultSessionDataSet
+    Left = 652
+    Top = 136
   end
 end
