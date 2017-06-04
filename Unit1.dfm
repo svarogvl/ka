@@ -381,6 +381,74 @@ object Form1: TForm1
         Height = 25
         TabOrder = 0
       end
+      object DBEdit18: TDBEdit
+        Left = 376
+        Top = 13
+        Width = 121
+        Height = 21
+        TabOrder = 1
+      end
+      object DBEdit19: TDBEdit
+        Left = 376
+        Top = 53
+        Width = 121
+        Height = 21
+        TabOrder = 2
+      end
+      object DBEdit20: TDBEdit
+        Left = 376
+        Top = 93
+        Width = 121
+        Height = 21
+        TabOrder = 3
+      end
+      object DBEdit21: TDBEdit
+        Left = 376
+        Top = 133
+        Width = 121
+        Height = 21
+        TabOrder = 4
+      end
+      object DBEdit22: TDBEdit
+        Left = 376
+        Top = 170
+        Width = 121
+        Height = 21
+        TabOrder = 5
+      end
+      object DBEdit23: TDBEdit
+        Left = 376
+        Top = 213
+        Width = 121
+        Height = 21
+        TabOrder = 6
+      end
+      object DBEdit24: TDBEdit
+        Left = 376
+        Top = 253
+        Width = 121
+        Height = 21
+        TabOrder = 7
+      end
+      object DBEdit25: TDBEdit
+        Left = 376
+        Top = 293
+        Width = 121
+        Height = 21
+        TabOrder = 8
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1099' '#1089#1077#1089#1089#1080#1080
+      ImageIndex = 3
+    end
+    object TabSheet5: TTabSheet
+      Caption = #1054#1082#1072#1079#1072#1085#1080#1077' '#1089#1090#1091#1076#1077#1085#1090#1072#1084' '#1087#1086#1084#1086#1097#1080
+      ImageIndex = 4
+    end
+    object TabSheet6: TTabSheet
+      Caption = #1055#1088#1086#1074#1077#1076#1077#1085#1080#1077' '#1082#1091#1088#1072#1090#1086#1088#1089#1082#1080#1093' '#1095#1072#1089#1086#1074
+      ImageIndex = 5
     end
   end
   object ADOConnection1: TADOConnection
