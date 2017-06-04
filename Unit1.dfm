@@ -22,6 +22,10 @@ object Form1: TForm1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = #1054#1073#1097#1080#1077' '#1089#1074#1077#1076#1077#1085#1080#1103' '#1086' '#1089#1090#1091#1076#1077#1085#1090#1072#1093
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label1: TLabel
         Left = 40
         Top = 16
@@ -194,6 +198,10 @@ object Form1: TForm1
     object TabSheet2: TTabSheet
       Caption = #1057#1086#1094#1080#1072#1083#1100#1085#1099#1081' '#1087#1072#1089#1087#1086#1088#1090' '#1075#1088#1091#1087#1087#1099
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label11: TLabel
         Left = 48
         Top = 24
@@ -441,22 +449,32 @@ object Form1: TForm1
     object TabSheet4: TTabSheet
       Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1099' '#1089#1077#1089#1089#1080#1080
       ImageIndex = 3
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
     object TabSheet5: TTabSheet
       Caption = #1054#1082#1072#1079#1072#1085#1080#1077' '#1089#1090#1091#1076#1077#1085#1090#1072#1084' '#1087#1086#1084#1086#1097#1080
       ImageIndex = 4
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
     object TabSheet6: TTabSheet
       Caption = #1055#1088#1086#1074#1077#1076#1077#1085#1080#1077' '#1082#1091#1088#1072#1090#1086#1088#1089#1082#1080#1093' '#1095#1072#1089#1086#1074
       ImageIndex = 5
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
   end
   object ADOConnection1: TADOConnection
-    Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\'#1040#1083#1077#1082#1089#1072#1085#1076#1088'\' +
-      'Desktop\'#1044#1080#1087#1083#1086#1084'\'#1055#1088#1080#1083#1086#1078#1077#1085#1080#1077' '#1050#1091#1088#1072#1090#1086#1088' 2\'#1050#1091#1088#1072#1090#1086#1088'.mdb;Persist Security' +
-      ' Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyProjects\delph' +
+      'i\diplom\ka\kurator.mdb;Persist Security Info=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -464,7 +482,6 @@ object Form1: TForm1
     Top = 440
   end
   object ADODataSet1: TADODataSet
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     CommandText = 'select *  from '#1057#1090#1091#1076#1077#1085#1090#1099
@@ -478,7 +495,6 @@ object Form1: TForm1
     Top = 440
   end
   object ADODataSet2: TADODataSet
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     CommandText = 
