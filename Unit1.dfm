@@ -309,68 +309,68 @@ object Form1: TForm1
     object TabSheet3: TTabSheet
       Caption = #1055#1088#1086#1084#1077#1078#1091#1090#1086#1095#1085#1072#1103' '#1072#1090#1090#1077#1089#1090#1072#1094#1080#1103
       ImageIndex = 2
-      ExplicitLeft = 0
-      object Label18: TLabel
+      object LabelFamily: TLabel
         Left = 56
         Top = 16
-        Width = 37
+        Width = 44
         Height = 13
-        Caption = 'Label18'
+        Caption = #1060#1072#1084#1080#1083#1080#1103
       end
-      object Label19: TLabel
+      object LabelName: TLabel
         Left = 56
         Top = 56
-        Width = 37
+        Width = 19
         Height = 13
-        Caption = 'Label19'
+        Caption = #1048#1084#1103
       end
-      object Label20: TLabel
+      object LabelMiddlename: TLabel
         Left = 56
         Top = 96
-        Width = 37
+        Width = 49
         Height = 13
-        Caption = 'Label20'
+        Caption = #1054#1090#1095#1077#1089#1090#1074#1086
       end
-      object Label21: TLabel
+      object LabelSubject: TLabel
         Left = 56
         Top = 136
-        Width = 37
+        Width = 61
         Height = 13
-        Caption = 'Label21'
+        Caption = #1044#1080#1089#1094#1080#1087#1083#1080#1085#1072
       end
-      object Label22: TLabel
+      object LabelMark: TLabel
         Left = 56
         Top = 173
-        Width = 37
+        Width = 38
         Height = 13
-        Caption = 'Label22'
+        Caption = #1054#1094#1077#1085#1082#1072
       end
-      object Label23: TLabel
+      object LabelSemestr: TLabel
         Left = 56
         Top = 216
-        Width = 37
+        Width = 42
         Height = 13
-        Caption = 'Label23'
+        Caption = #1057#1077#1084#1077#1089#1090#1088
       end
-      object Label24: TLabel
+      object LabelPropusk: TLabel
         Left = 56
         Top = 256
-        Width = 37
+        Width = 48
         Height = 13
-        Caption = 'Label24'
+        Caption = #1055#1088#1086#1087#1091#1089#1082#1080
       end
-      object Label25: TLabel
+      object LabelDate: TLabel
         Left = 56
         Top = 296
-        Width = 37
+        Width = 88
         Height = 13
-        Caption = 'Label25'
+        Caption = #1044#1072#1090#1072' '#1072#1090#1090#1077#1089#1090#1072#1094#1080#1080
       end
       object DBNavigator3: TDBNavigator
         Left = 208
         Top = 368
         Width = 240
         Height = 25
+        DataSource = DataSource3
         TabOrder = 0
       end
       object DBEdit18: TDBEdit
@@ -378,6 +378,7 @@ object Form1: TForm1
         Top = 13
         Width = 121
         Height = 21
+        DataField = #1060#1072#1084#1080#1083#1080#1103
         DataSource = DataSource3
         TabOrder = 1
       end
@@ -386,6 +387,8 @@ object Form1: TForm1
         Top = 53
         Width = 121
         Height = 21
+        DataField = #1048#1084#1103
+        DataSource = DataSource3
         TabOrder = 2
       end
       object DBEdit20: TDBEdit
@@ -393,6 +396,8 @@ object Form1: TForm1
         Top = 93
         Width = 121
         Height = 21
+        DataField = #1054#1090#1095#1077#1089#1090#1074#1086
+        DataSource = DataSource3
         TabOrder = 3
       end
       object DBEdit21: TDBEdit
@@ -400,6 +405,8 @@ object Form1: TForm1
         Top = 133
         Width = 121
         Height = 21
+        DataField = #1053#1072#1079#1074#1072#1085#1080#1077#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099#1055#1086#1083#1085#1086#1077
+        DataSource = DataSource3
         TabOrder = 4
       end
       object DBEdit22: TDBEdit
@@ -407,6 +414,8 @@ object Form1: TForm1
         Top = 170
         Width = 121
         Height = 21
+        DataField = #1054#1094#1077#1085#1082#1072
+        DataSource = DataSource3
         TabOrder = 5
       end
       object DBEdit23: TDBEdit
@@ -414,6 +423,8 @@ object Form1: TForm1
         Top = 213
         Width = 121
         Height = 21
+        DataField = #1057#1077#1084#1077#1089#1090#1088
+        DataSource = DataSource3
         TabOrder = 6
       end
       object DBEdit24: TDBEdit
@@ -421,6 +432,8 @@ object Form1: TForm1
         Top = 253
         Width = 121
         Height = 21
+        DataField = #1055#1088#1086#1087#1091#1089#1082#1080
+        DataSource = DataSource3
         TabOrder = 7
       end
       object DBEdit25: TDBEdit
@@ -428,6 +441,8 @@ object Form1: TForm1
         Top = 293
         Width = 121
         Height = 21
+        DataField = #1044#1072#1090#1072#1040#1090#1090#1077#1089#1090#1072#1094#1080#1080
+        DataSource = DataSource3
         TabOrder = 8
       end
     end
@@ -623,9 +638,8 @@ object Form1: TForm1
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\'#1040#1083#1077#1082#1089#1072#1085#1076#1088'\' +
-      'Desktop\'#1053#1086#1074#1072#1103' '#1087#1072#1087#1082#1072' (2)\ka\kurator.mdb;Persist Security Info=Fal' +
-      'se;'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyProjects\delph' +
+      'i\diplom\ka\kurator.mdb;Persist Security Info=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -646,7 +660,6 @@ object Form1: TForm1
     Top = 440
   end
   object ADODataSet2: TADODataSet
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     CommandText = 
@@ -664,58 +677,21 @@ object Form1: TForm1
     Top = 440
   end
   object ADODataSet3: TADODataSet
+    Active = True
     Connection = ADOConnection1
+    CursorType = ctStatic
     CommandText = 
-      'select ['#1057#1090#1091#1076#1077#1085#1090'].['#1060#1072#1084#1080#1083#1080#1103'], ['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1072'], ['#1057#1077#1084#1077#1089#1090#1088'], ['#1054#1094#1077#1085#1082#1072']'#13#10'f' +
-      'rom '#1040#1090#1090#1077#1089#1090#1072#1094#1080#1103' '#1057#1090#1091#1076#1077#1085#1090#1099' where ['#1057#1077#1089#1089#1080#1103'].['#1057#1090#1091#1076#1077#1085#1090']=['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1064#1080#1092 +
-      #1088'] and ['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099'].['#1053#1072#1079#1074#1072#1085#1080#1077#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099#1055#1086#1083#1085#1086#1077']=['#1057#1077#1089#1089#1080#1103'].['#1044#1080#1089#1094#1080#1087#1083 +
-      #1080#1085#1072'] '
-    DataSource = DataSource3
-    Parameters = <
-      item
-        Name = '['#1057#1090#1091#1076#1077#1085#1090'].['#1060#1072#1084#1080#1083#1080#1103']'
-        Attributes = [paNullable]
-        DataType = ftWideString
-        NumericScale = 255
-        Precision = 255
-        Size = 510
-      end
-      item
-        Name = '['#1057#1077#1089#1089#1080#1103'].['#1057#1090#1091#1076#1077#1085#1090']'
-        Attributes = [paNullable]
-        DataType = ftWideString
-        NumericScale = 255
-        Precision = 255
-        Size = 510
-      end
-      item
-        Name = '['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1064#1080#1092#1088']'
-        Attributes = [paNullable]
-        DataType = ftWideString
-        NumericScale = 255
-        Precision = 255
-        Size = 510
-      end
-      item
-        Name = '['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099'].['#1053#1072#1079#1074#1072#1085#1080#1077#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099#1055#1086#1083#1085#1086#1077']'
-        Attributes = [paNullable]
-        DataType = ftWideString
-        NumericScale = 255
-        Precision = 255
-        Size = 510
-      end
-      item
-        Name = '['#1057#1077#1089#1089#1080#1103'].['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1072']'
-        Attributes = [paNullable]
-        DataType = ftWideString
-        NumericScale = 255
-        Precision = 255
-        Size = 510
-      end>
+      'select ['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1060#1072#1084#1080#1083#1080#1103'],['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1048#1084#1103'], ['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1054#1090#1095#1077#1089#1090 +
+      #1074#1086'],  ['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099'].['#1053#1072#1079#1074#1072#1085#1080#1077#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099#1055#1086#1083#1085#1086#1077'], '#1054#1094#1077#1085#1082#1072', '#1057#1077#1084#1077#1089#1090#1088', ' +
+      #1055#1088#1086#1087#1091#1089#1082#1080', '#1044#1072#1090#1072#1040#1090#1090#1077#1089#1090#1072#1094#1080#1080#13#10'from '#1057#1090#1091#1076#1077#1085#1090#1099', '#1040#1090#1090#1077#1089#1090#1072#1094#1080#1103', '#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099#13 +
+      #10'where ['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1064#1080#1092#1088']=['#1040#1090#1090#1077#1089#1090#1072#1094#1080#1103'].['#1057#1090#1091#1076#1077#1085#1090'] '#13#10'and ['#1040#1090#1090#1077#1089#1090#1072#1094#1080 +
+      #1103'].['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1072']= ['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099'].['#1050#1086#1076#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099'] '
+    Parameters = <>
     Left = 452
     Top = 440
   end
   object DataSource3: TDataSource
+    DataSet = ADODataSet3
     Left = 516
     Top = 440
   end
@@ -740,7 +716,6 @@ object Form1: TForm1
     Top = 240
   end
   object ADODataSet5: TADODataSet
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     CommandText = 
