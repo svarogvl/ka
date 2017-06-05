@@ -49,7 +49,6 @@ type
     DBEdit14: TDBEdit;
     DBEdit15: TDBEdit;
     DBEdit16: TDBEdit;
-    DBEdit17: TDBEdit;
     ADODataSet2: TADODataSet;
     DataSource2: TDataSource;
     DBNavigator2: TDBNavigator;
@@ -80,7 +79,6 @@ type
     showall: TRadioButton;
     searchButton: TButton;
     resultSessionSearchGrid: TDBGrid;
-    DBNavigator4: TDBNavigator;
     lastname: TCheckBox;
     subject: TCheckBox;
     grade: TCheckBox;
@@ -89,6 +87,13 @@ type
     GradeEdit: TEdit;
     resultSessionDataSet: TADODataSet;
     resultSessionDataSource: TDataSource;
+    DBNavigator4: TDBNavigator;
+    DBGrid1: TDBGrid;
+    DBGrid2: TDBGrid;
+    DBNavigator5: TDBNavigator;
+    DBNavigator6: TDBNavigator;
+    DataSource5: TDataSource;
+    ADODataSet5: TADODataSet;
     procedure lastnameClick(Sender: TObject);
     procedure subjectClick(Sender: TObject);
     procedure gradeClick(Sender: TObject);
