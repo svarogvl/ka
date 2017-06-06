@@ -1,8 +1,8 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 516
+  Caption = #1050#1091#1088#1072#1090#1086#1088
+  ClientHeight = 532
   ClientWidth = 780
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,11 +14,11 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object PageControl1: TPageControl
-    Left = 8
+    Left = 0
     Top = 8
-    Width = 764
-    Height = 499
-    ActivePage = TabSheet3
+    Width = 772
+    Height = 516
+    ActivePage = TabSheet6
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = #1054#1073#1097#1080#1077' '#1089#1074#1077#1076#1077#1085#1080#1103' '#1086' '#1089#1090#1091#1076#1077#1085#1090#1072#1093
@@ -91,6 +91,20 @@ object Form1: TForm1
         Width = 151
         Height = 13
         Caption = #1044#1086#1087#1086#1083#1085#1080#1090#1077#1083#1100#1085#1072#1103' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1103
+      end
+      object Label18: TLabel
+        Left = 192
+        Top = 456
+        Width = 36
+        Height = 13
+        Caption = #1043#1088#1091#1087#1087#1072
+      end
+      object Label19: TLabel
+        Left = 464
+        Top = 456
+        Width = 43
+        Height = 13
+        Caption = #1050#1091#1088#1072#1090#1086#1088
       end
       object DBNavigator1: TDBNavigator
         Left = 248
@@ -183,12 +197,30 @@ object Form1: TForm1
       end
       object DBEdit10: TDBEdit
         Left = 368
-        Top = 381
+        Top = 373
         Width = 345
         Height = 21
         DataField = #1044#1086#1087#1057#1074#1077#1076#1077#1085#1080#1103
         DataSource = DataSource1
         TabOrder = 10
+      end
+      object Edit1: TEdit
+        Left = 248
+        Top = 455
+        Width = 97
+        Height = 21
+        TabOrder = 11
+        Text = 'Edit1'
+        OnChange = Edit1Change
+      end
+      object Edit2: TEdit
+        Left = 544
+        Top = 455
+        Width = 145
+        Height = 21
+        TabOrder = 12
+        Text = 'Edit2'
+        OnChange = Edit2Change
       end
     end
     object TabSheet2: TTabSheet
@@ -449,6 +481,12 @@ object Form1: TForm1
     object sessionResultTab: TTabSheet
       Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1099' '#1089#1077#1089#1089#1080#1080
       ImageIndex = 3
+      object DBText2: TDBText
+        Left = 664
+        Top = 392
+        Width = 65
+        Height = 17
+      end
       object search: TRadioButton
         Left = 80
         Top = 16
@@ -569,35 +607,25 @@ object Form1: TForm1
           item
             Expanded = False
             FieldName = #1060#1072#1084#1080#1083#1080#1103
-            Width = 77
+            Width = 98
             Visible = True
           end
           item
             Expanded = False
             FieldName = #1048#1084#1103
-            Width = 81
+            Width = 102
             Visible = True
           end
           item
             Expanded = False
             FieldName = #1054#1090#1095#1077#1089#1090#1074#1086
-            Width = 93
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = #1043#1088#1091#1087#1087#1072
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = #1060#1072#1082#1091#1083#1100#1090#1077#1090
-            Width = 81
+            Width = 145
             Visible = True
           end
           item
             Expanded = False
             FieldName = #1055#1086#1084#1086#1097#1100
+            Width = 317
             Visible = True
           end>
       end
@@ -613,33 +641,78 @@ object Form1: TForm1
     object TabSheet6: TTabSheet
       Caption = #1055#1088#1086#1074#1077#1076#1077#1085#1080#1077' '#1082#1091#1088#1072#1090#1086#1088#1089#1082#1080#1093' '#1095#1072#1089#1086#1074
       ImageIndex = 5
-      object DBGrid2: TDBGrid
-        Left = 3
-        Top = 3
-        Width = 750
-        Height = 422
-        TabOrder = 0
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-      end
       object DBNavigator6: TDBNavigator
         Left = 256
         Top = 383
         Width = 240
         Height = 25
-        DataSource = DataSource5
+        DataSource = DataSource4
+        TabOrder = 0
+      end
+      object DBGrid2: TDBGrid
+        Left = 0
+        Top = 0
+        Width = 764
+        Height = 321
+        Align = alTop
+        DataSource = DataSource4
         TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = #1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1077
+            Width = 74
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = #1044#1072#1090#1072#1053#1072#1079#1085#1072#1095#1077#1085#1080#1103
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = #1044#1072#1090#1072#1055#1088#1086#1074#1077#1076#1077#1085#1080#1103
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = #1040#1091#1076#1080#1090#1086#1088#1080#1103
+            Width = 75
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = #1048#1089#1087#1086#1083#1085#1080#1090#1077#1083#1080
+            Width = 225
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = #1057#1088#1086#1082#1080#1048#1089#1087#1086#1083#1085#1077#1085#1080#1103
+            Width = 91
+            Visible = True
+          end>
       end
     end
   end
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyProjects\delph' +
-      'i\diplom\ka\kurator.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Us' +
+      'ers\'#1040#1083#1077#1082#1089#1072#1085#1076#1088'\Desktop\'#1050#1091#1088#1072#1090#1086#1088' 2\kurator.mdb;Mode=Share Deny None' +
+      ';Persist Security Info=False;Jet OLEDB:System database="";Jet OL' +
+      'EDB:Registry Path="";Jet OLEDB:Database Password="";Jet OLEDB:En' +
+      'gine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global P' +
+      'artial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB' +
+      ':New Database Password="";Jet OLEDB:Create System Database=False' +
+      ';Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don'#39't Copy Locale on' +
+      ' Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Je' +
+      't OLEDB:SFP=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -668,16 +741,16 @@ object Form1: TForm1
       #1090#1099', '#1057#1086#1094#1080#1072#1083#1100#1085#1099#1077#1050#1072#1090#1077#1075#1086#1088#1080#1080' where ['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1057#1086#1094#1080#1072#1083#1100#1085#1072#1103#1050#1072#1090#1077#1075#1086#1088#1080#1103']=[' +
       #1057#1086#1094#1080#1072#1083#1100#1085#1099#1077#1050#1072#1090#1077#1075#1086#1088#1080#1080'].['#1050#1086#1076#1050#1072#1090#1077#1075#1086#1088#1080#1080']'
     Parameters = <>
-    Left = 292
-    Top = 440
+    Left = 44
+    Top = 384
   end
   object DataSource2: TDataSource
     DataSet = ADODataSet2
-    Left = 364
-    Top = 440
+    Left = 108
+    Top = 384
   end
   object ADODataSet3: TADODataSet
-    Active = True
+    AutoCalcFields = False
     Connection = ADOConnection1
     CursorType = ctStatic
     CommandText = 
@@ -687,13 +760,13 @@ object Form1: TForm1
       #10'where ['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1064#1080#1092#1088']=['#1040#1090#1090#1077#1089#1090#1072#1094#1080#1103'].['#1057#1090#1091#1076#1077#1085#1090'] '#13#10'and ['#1040#1090#1090#1077#1089#1090#1072#1094#1080 +
       #1103'].['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1072']= ['#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099'].['#1050#1086#1076#1044#1080#1089#1094#1080#1087#1083#1080#1085#1099'] '
     Parameters = <>
-    Left = 452
-    Top = 440
+    Left = 540
+    Top = 392
   end
   object DataSource3: TDataSource
     DataSet = ADODataSet3
-    Left = 516
-    Top = 440
+    Left = 612
+    Top = 392
   end
   object resultSessionDataSet: TADODataSet
     Connection = ADOConnection1
@@ -723,9 +796,29 @@ object Form1: TForm1
       #1090#1074#1086'],['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1043#1088#1091#1087#1087#1072'], ['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1060#1072#1082#1091#1083#1100#1090#1077#1090'], ['#1057#1086#1094#1080#1072#1083#1100#1085#1072#1103#1055#1086#1084 +
       #1086#1097#1100'].['#1055#1086#1084#1086#1097#1100']'#13#10'from '#1054#1082#1072#1079#1072#1085#1080#1077#1055#1086#1084#1086#1097#1080', '#1057#1086#1094#1080#1072#1083#1100#1085#1072#1103#1055#1086#1084#1086#1097#1100', '#1057#1090#1091#1076#1077#1085#1090#1099' w' +
       'here ['#1054#1082#1072#1079#1072#1085#1080#1077#1055#1086#1084#1086#1097#1080'].['#1055#1086#1084#1086#1097#1100']=['#1057#1086#1094#1080#1072#1083#1100#1085#1072#1103#1055#1086#1084#1086#1097#1100'].['#1050#1086#1076#1055#1086#1084#1086#1097#1080'] an' +
-      'd ['#1054#1082#1072#1079#1072#1085#1080#1077#1055#1086#1084#1086#1097#1080'].['#1057#1090#1091#1076#1077#1085#1090']=['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1064#1080#1092#1088']'
+      'd ['#1054#1082#1072#1079#1072#1085#1080#1077#1055#1086#1084#1086#1097#1080'].['#1057#1090#1091#1076#1077#1085#1090']=['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1064#1080#1092#1088'] and ['#1054#1082#1072#1079#1072#1085#1080#1077#1055#1086#1084#1086 +
+      #1097#1080'].['#1060#1072#1082#1091#1083#1100#1090#1077#1090']=['#1057#1090#1091#1076#1077#1085#1090#1099'].['#1060#1072#1082#1091#1083#1100#1090#1077#1090']'
     Parameters = <>
     Left = 600
     Top = 240
+  end
+  object DataSource4: TDataSource
+    DataSet = ADODataSet4
+    Left = 676
+    Top = 328
+  end
+  object ADODataSet4: TADODataSet
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 
+      'select ['#1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1103'].['#1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1077'], ['#1057#1088#1086#1082#1080#1048#1089#1087#1086#1083#1085#1077#1085#1080#1103'], ['#1048#1089#1087#1086#1083#1085#1080#1090 +
+      #1077#1083#1080'], ['#1055#1088#1086#1074#1077#1076#1077#1085#1080#1077#1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1081'].['#1044#1072#1090#1072#1053#1072#1079#1085#1072#1095#1077#1085#1080#1103'], ['#1044#1072#1090#1072#1055#1088#1086#1074#1077#1076#1077#1085#1080#1103']' +
+      ', ['#1040#1091#1076#1080#1090#1086#1088#1080#1103']'#13#10'from '#1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1103', '#1055#1088#1086#1074#1077#1076#1077#1085#1080#1077#1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1081' where ['#1052#1077 +
+      #1088#1086#1087#1088#1080#1103#1090#1080#1103'].['#1050#1086#1076#1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1103']=['#1055#1088#1086#1074#1077#1076#1077#1085#1080#1077#1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1081'].['#1052#1077#1088#1086#1087#1088#1080#1103#1090#1080#1077 +
+      ']'
+    Parameters = <>
+    Left = 596
+    Top = 328
   end
 end

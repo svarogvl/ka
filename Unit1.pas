@@ -89,15 +89,24 @@ type
     resultSessionDataSource: TDataSource;
     DBNavigator4: TDBNavigator;
     DBGrid1: TDBGrid;
-    DBGrid2: TDBGrid;
     DBNavigator5: TDBNavigator;
     DBNavigator6: TDBNavigator;
     DataSource5: TDataSource;
     ADODataSet5: TADODataSet;
+    DataSource4: TDataSource;
+    ADODataSet4: TADODataSet;
+    DBGrid2: TDBGrid;
+    DBText2: TDBText;
+    Label18: TLabel;
+    Edit1: TEdit;
+    Label19: TLabel;
+    Edit2: TEdit;
     procedure lastnameClick(Sender: TObject);
     procedure subjectClick(Sender: TObject);
     procedure gradeClick(Sender: TObject);
     procedure searchButtonClick(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -111,6 +120,16 @@ implementation
 
 {$R *.dfm}
 
+
+procedure TForm1.Edit1Change(Sender: TObject);
+begin
+Edit1.Text:='4-1';
+end;
+
+procedure TForm1.Edit2Change(Sender: TObject);
+begin
+Edit1.Text:='«орин јнтон ёрьевич';
+end;
 
 procedure TForm1.gradeClick(Sender: TObject);
 begin
